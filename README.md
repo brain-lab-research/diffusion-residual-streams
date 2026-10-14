@@ -1,8 +1,15 @@
-# From Evidence to Predictions: Residual Computation in Diffusion Language Models
+# Residual Computation in Diffusion Language Models
 
 **Ekaterina Alimaskina · Suren Kazarian · Gleb Molodtsov · Aleksandr Beznosikov**
 
+[![arXiv 2610.18407](https://img.shields.io/badge/arXiv-2610.18407-b31b1b.svg)](https://arxiv.org/abs/2610.18407)
+[![alphaXiv 2610.18407](https://img.shields.io/badge/alphaXiv-2610.18407-6C47FF.svg)](https://www.alphaxiv.org/abs/2610.18407)
+
 Masked diffusion models use visible tokens as evidence and masked tokens as prediction targets in the same forward pass. We study whether multiple persistent residual streams help the model handle these roles. The repository contains the model, training code, and experiments for the 337M and 1B models in the paper.
+
+![Prepare, preserve, and reuse: multi-stream residual computation within a denoising pass](assets/overview.png)
+
+*Early blocks prepare position-specific states, one stream preserves them while the other accumulates evidence, and late blocks reuse the retained information.*
 
 ## Main results
 
